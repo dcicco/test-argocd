@@ -1,0 +1,6 @@
+primary:
+  persistence:
+    enabled: true
+    # Use empty string to use the default StorageClass in your cluster
+    # or set to "-" to disable dynamic provisioning
+    storageClass: ''

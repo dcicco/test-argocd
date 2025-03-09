@@ -8,11 +8,12 @@ spec:
   source:
     repoURL: 'https://github.com/dcicco/test-argocd.git'
     targetRevision: HEAD
-    path: charts/postgres
+    path: argocd/postgres
     helm:
       # This uses the default values.yaml found in the chart.
       valueFiles:
         - values.yaml
+        - values-storage.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: postgres
