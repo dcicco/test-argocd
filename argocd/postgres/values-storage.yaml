@@ -1,6 +1,6 @@
 persistence:
   enabled: true
-  # storageClass: "" # If you want to use a specific storage class, uncomment and specify
+  storageClass: 'local-path' # K3s provides this storage class by default
   accessMode: ReadWriteOnce
   size: 8Gi
   # annotations: {}
