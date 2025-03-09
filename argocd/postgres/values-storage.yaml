@@ -1,6 +1,21 @@
-primary:
-  persistence:
-    enabled: true
-    # Use empty string to use the default StorageClass in your cluster
-    # or set to "-" to disable dynamic provisioning
-    storageClass: ''
+persistence:
+  enabled: true
+  # storageClass: "" # If you want to use a specific storage class, uncomment and specify
+  accessMode: ReadWriteOnce
+  size: 8Gi
+  # annotations: {}
+  # subPath: ""
+  # existingClaim: ""
+
+# Configure resource requests and limits
+resources:
+  requests:
+    memory: '256Mi'
+    cpu: '250m'
+  limits:
+    memory: '1Gi'
+    cpu: '500m'
+
+# Add volume permissions to allow PostgreSQL to write to the mounted volume
+volumePermissions:
+  enabled: true
