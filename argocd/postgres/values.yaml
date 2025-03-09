@@ -1,0 +1,18 @@
+image:
+  repository: bitnami/postgresql
+  tag: 16.4.16
+
+auth:
+  existingSecret: postgres-secret
+  username: postgres
+  database: mydatabase
+
+primary:
+  persistence:
+    enabled: true
+    size: 8Gi
+
+global:
+  postgresql:
+    auth:
+      existingSecret: postgres-secret
