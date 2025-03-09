@@ -10,5 +10,5 @@ spec:
       targetPort: postgres
       protocol: TCP
       name: postgres
-      nodePort: 33000
+      nodePort: 32222
   selector: {{- include "postgres.selectorLabels" . | nindent 4 }}
